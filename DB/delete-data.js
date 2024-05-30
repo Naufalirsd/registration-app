@@ -2,7 +2,7 @@ require("dotenv").config({path: ".env.development.local"});
 
 const {sql} = require("@vercel/postgres");
 
-async function deleteData() {
+async function execute() {
     try {
         const {rows} = await sql`
         DELETE FROM users_local
@@ -14,4 +14,4 @@ async function deleteData() {
     }
 }
 
-deleteData();
+execute();

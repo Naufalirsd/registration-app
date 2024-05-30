@@ -10,7 +10,7 @@ async function execute() {
         id SERIAL PRIMARY KEY,
         nama VARCHAR(30) NOT NULL,
         username VARCHAR(15) NOT NULL UNIQUE,
-        password VARCHAR(10) NOT NULL,
+        password VARCHAR(60) NOT NULL,
         role INT DEFAULT 0 CHECK (role IN (0, 1)),
         status INT DEFAULT 1 CHECK (status IN (0, 1)),
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP

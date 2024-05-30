@@ -2,7 +2,7 @@ require("dotenv").config({path: ".env.development.local"});
 
 const {sql} = require("@vercel/postgres");
 
-async function updateData() {
+async function execute() {
     try {
         const {rows} = await sql`
         UPDATE users_local
@@ -20,4 +20,4 @@ async function updateData() {
     }
 }
 
-updateData();
+execute();
